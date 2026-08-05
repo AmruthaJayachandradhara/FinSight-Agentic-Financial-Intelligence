@@ -1,10 +1,6 @@
 """
 Financial RAG Pipeline - Document Ingestion Module
 
-* Team Members:
-  - Dhairya Umrania
-  - Naman Deep
-  - Devaansh Kataria
 
 * Description:
   Handles the loading and processing of financial documents.
