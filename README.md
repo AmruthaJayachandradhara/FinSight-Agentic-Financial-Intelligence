@@ -1,4 +1,4 @@
-# Instruction Tuned Financial QnA RAG
+# RAG-based Finance QnA System
 
 A Retrieval-Augmented Generation (RAG) QnA system focused on financial context with hybrid retrieval methods and instruction-tuned large language models.
 
