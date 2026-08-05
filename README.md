@@ -58,7 +58,7 @@ The system follows a modular architecture with the following flow:
 
 1. Clone the repository:
 ```bash
-
+https://github.com/AmruthaJayachandradhara/RAG-based-Finance-QnA-System.git
 ```
 
 2. Install dependencies:
