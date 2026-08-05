@@ -38,6 +38,8 @@ import os
 load_dotenv()
 
 from ingestion import ingest_documents
+from retriever import Retriever
+from hybrid_retriever import HybridReranker
 
 # Load environment variables
 DEVICE = os.getenv('DEVICE', 'cpu')
@@ -56,6 +58,22 @@ def run_rag_system():
     else:
         print("No GPU detected. Using CPU.")
     print(f"Using device: {DEVICE}")
+
+# Step 1: Ingest documents
+    print("\n--- DOCUMENT INGESTION ---")
+    documents = ingest_documents()
+    
+    if not documents:
+        print("No documents to process. Exiting.")
+        return
+    
+    # Step 2: Initialize retriever
+    print("\n--- INITIALIZING RETRIEVER ---")
+    retriever = Retriever(documents)
+        
+    # Step 3: Initialize reranker for Improvement 1
+    print("\n--- INITIALIZING RERANKER ---")
+    reranker = HybridReranker(device=DEVICE)
 
     
 
